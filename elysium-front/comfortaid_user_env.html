@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComfortAid Área Restrita</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- ... -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
+    rel="stylesheet">
+    <!-- ... -->
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
+    <link rel="shortcut icon" type="imagex/png" href="./assets/img/icone192.png">
+    <!-- font-awesome -->
+    <link rel='stylesheet' type='text/css' media='screen'         
+            href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css'>
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     
+</head>
+<body>
+
+</body>
+</html>
+     <!-- barra de navegacao da Aplicação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- Botão do menu de hambúrguer -->
+            <button class="navbar-toggler btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Logo ou Nome do site -->
+        <a class="navbar-brand ms-3 fw-bold" href="#">ComfortAid</a>
+            <!-- Itens do menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-light">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="navega('home')">Voltar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tel:+5548988900001">Contato</a>
+                    </li>
+                </ul>
+                <!-- Link de Contato -->
+            <a href="tel:+5548988900001" class="btn btn-primary me-3">
+                <i class="fa-solid fa-phone"></i> Contato
+            </a>
+
+            <!-- Link de Login -->
+            <!-- <a href="comfortaid_user_env.html" class="btn btn-primary">
+                <i class="fa-solid fa-sign-in-alt"></i> Login
+            </a> -->
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Apresentacao de login -->
+    <div id="login-page">
+        <div id="login-pages" class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="card shadow-lg p-4" style="width: 100%; max-width: 400px;">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Login</h2>
+                    <div class="form-group mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" id="login-email" class="form-control" placeholder="Digite seu email" required>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="password">Senha</label>
+                        <input type="password" id="login-password" class="form-control" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="d-grid mb-3">
+                        <button class="btn btn-primary" onclick="login()">Entrar</button>
+                    </div>
+                    <div class="text-center">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#cadastroModal" class="text-decoration-none">
+                            Não tem uma conta? <strong>Cadastre-se aqui</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- ####### Apresentacao da area restrita a profissionais ######-->
+    <div id="professional-page" class="hidden">
+        <!-- barra de navegacao da Aplicação Navbar Bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <div class="container-fluid">
+                <!-- Botão Hambúrguer -->
+                <button class="navbar-toggler btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#userNav" aria-controls="userNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Logo ou Nome do site -->
+                <a class="navbar-brand ms-3 text-light fw-bold" href="#">Área do Profissional</a>
+
+                <!-- Itens do Menu -- Botão para alternar a visibilidade -->
+                <div class="collapse navbar-collapse" id="userNav">
+                    <ul class="navbar-nav ms-auto bg-secondary">
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-2" onclick="navega('home')">
+                                <i class="fa-solid fa-home"></i> Home
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-2" onclick="navega('new-service')">
+                                <i class="fa-solid fa-plus"></i> Novo Serviço
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-2" onclick="navega('update-data')">
+                                <i class="fa-sync fa-solid"></i> Atualizar Dados
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-3" onclick="navega('Reviews')">
+                                <i class="fa-solid fa-star"></i> Avaliações
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-3" onclick="logout()">
+                                <i class="fa-solid fa-right-from-bracket"></i> Sair
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+            <!-- Elemento que será alternado -->
+            <!-- Apresentacao Elemento Home -->
+        <div id="home" class="tela show">
+            <h3>HOME</h3>
+            <h2>Bem-vindo, <span id="professional-name"></span></h2>
+            
+            
+            <h4>Agendamentos Programados</h4>
+                <div class="row" id="scheduled-appointments"></div>
+                <div id="error-message" class="error-message"></div>
+                <ul id="appointments-list"></ul>
+                <!-- Conteúdo da página de apresentação -->
+
+                <div class="search-bar mb-4">
+                    <button class="btn btn-secondary" onclick="navega('update-data')"><i class="fa-sync fa-solid"></i> Atualizar Dados</button>
+            <button class="btn btn-secondary" onclick="navega('new-service')"><i class="fa-solid fa-plus"></i> Novo Serviço</button>
+                </div>
+        </div>
+        <!-- Apresentacao Elemento Atualizar Dados -->
+        <div id="update-data" class="tela collapse">
+            <h3>Atualizar Dados</h3>
+                <form id="update-data-form">
+                    <fieldset>
+                        <legend> 
+                            Cadastro de Dados Pessoais
+                        </legend>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha" class="form-control" required>
+                        </div>
+                        <!-- Campos específicos para profissionais -->
+                    <div id="profissional-fields" class="hidden">
+                        <div class="form-group">
+                            <label for="especialidade">Especialidade</label>
+                            <input type="text" id="especialidade" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="registro-profissional">Registro Profissional</label>
+                            <input type="text" id="registro-profissional" class="form-control">
+                        </div>
+                    </div>
+                    <!-- Campos específicos para clientes -->
+                    <div id="cliente-fields" class="hidden">
+                    </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend> 
+                            Cadastro de dados de Endereço
+                        </legend>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="numero-endereco">Número</label>
+                            <input type="text" id="numero-endereco" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="complemento-endereco">Complemento</label>
+                            <input type="text" id="complemento-endereco" class="form-control">
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">Atualizar Dados</button>
+                    
+                    <div class="form-group">
+                        <label for="imagem-usuario-input">Imagem de Perfil</label>
+                        <input type="file" id="imagem-usuario-input" class="form-control">
+                        <button type="button" id="upload-imagem-btn" class="btn btn-secondary">Enviar Imagem</button>
+                    </div>
+                </form>
+                <img id="imagem-usuario" src="" alt="Imagem do Usuário" class="img-thumbnail mt-3">
+        </div>
+        <!-- Apresentacao Elemento Cadastrar Novo Serviço -->
+        <div id="new-service" class="tela collapse">
+            <h3>Cadastrar Novo Serviço</h3>
+            <form id="new-service-form">
+                <div class="form-group">
+                    <label for="nome-servico">Nome do Serviço</label>
+                    <input type="text" id="nome-servico" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao-servico">Descrição</label>
+                    <textarea id="descricao-servico" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="preco-servico">Preço</label>
+                    <input type="number" id="preco-servico" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="duracao-servico">Duração (minutos)</label>
+                    <input type="number" id="duracao-servico" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="situacao-servico">Situação</label>
+                    <select id="situacao-servico" class="form-control" required>
+                        <option value="ATIVO">Ativo</option>
+                        <option value="INATIVO">Inativo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="data-disponivel-servico">Data Disponível</label>
+                    <input type="date" id="data-disponivel-servico" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagem-servico">Imagem do Serviço</label>
+                    <input type="file" id="imagem-servico" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="cadastrarNovoServico()">Cadastrar</button>
+            </form>
+        </div>
+            <!-- Apresentacao de Avaliacoes e parceiros do aplicativo-->
+        <div id="Reviews" class="tela collapse">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                    <h3>Avaliações</h3>
+                    <div id="reviews-list" class="list-group">
+                        <!-- Avaliações serão carregadas aqui -->
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <h4>Links Patrocinados</h4>
+                    <div class="list-group">
+                        <a href="https://junhaumhayden.github.io/publish/" class="list-group-item list-group-item-action">Landingpage</a>
+                        <a href="https://junhaumhayden.github.io/publish/flexturismo.html" class="list-group-item list-group-item-action">FlexTurismo</a>
+                        <a href="https://junhaumhayden.github.io/publish/gatinhos.html" class="list-group-item list-group-item-action">Ver Gatinhos Fofinhos</a>
+                        <a href="https://arthurs08.github.io/ChefListPrj/" class="list-group-item list-group-item-action">ChefList</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ###### Apresentacao da area restrita a cliente ####### -->
+    <div id="cliente-page" class="hidden">
+        <!-- barra de navegacao da Aplicação Navbar Bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <div class="container-fluid">
+                <!-- Botão Hambúrguer -->
+                <button class="navbar-toggler btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#userNav" aria-controls="userNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Logo ou Nome do site -->
+                <a class="navbar-brand ms-3 text-light fw-bold" href="#">Área do Freguês</a>
+
+                <!-- Itens do Menu -- Botão para alternar a visibilidade -->
+                <div class="collapse navbar-collapse" id="userNav">
+                    <ul class="navbar-nav ms-auto bg-secondary">
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-2" onclick="navega('home-client')">
+                                <i class="fa-solid fa-home"></i> Home
+                            </button>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <button class="btn btn-secondary me-2" onclick="navega('appointment-history-client')">
+                                <i class="fa-solid fa-file"></i> Historico de Agendamentos
+                            </button>
+                        </li> -->
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-2" onclick="navega('update-data-client')">
+                                <i class="fa-solid fa-concierge-bell"></i> Atualizar Dados
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-3" onclick="navega('Reviews-client')">
+                                <i class="fa-solid fa-star"></i> Avaliações
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-secondary me-3" onclick="logout()">
+                                <i class="fa-solid fa-right-from-bracket"></i> Sair
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Elemento que será alternado -->
+        <!-- Apresentacao Elemento Home -->
+        <div id="home-client" class="tela show">
+            <h3>HOME</h3>
+            <h2>Bem-vindo, <span id="cliente-name"></span></h2>
+            <h4>Agendamentos Programados</h4>
+                <div class="row" id="scheduled-appointments-client"></div>
+                <div id="error-message" class="error-message"></div>
+                <!-- Conteúdo da página de apresentação -->
+                <div class="search-bar mb-4">
+                    <button class="btn btn-secondary" onclick="navega('uupdate-data-client')"><i class="fa-sync fa-solid"></i> Atualizar Dados</button>
+                </div>
+        </div>
+        <!-- Apresentacao Elemento Atualizar Dados -->
+        <div id="update-data-client" class="tela collapse">
+            <h3>Atualizar Dados</h3>
+                <form id="update-data-form-client">
+                    <fieldset>
+                        <legend> 
+                            Cadastro de Dados Pessoais
+                        </legend>
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome-client" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" id="email-client" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha-client" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="nascimento">Data de Nascimento</label>
+                            <input type="date" id="nascimento" class="form-control">
+                        </div>
+                    
+                    </fieldset>
+                    <fieldset>
+                        <legend> 
+                            Cadastro de dados de Endereço
+                        </legend>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone-client" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep-client" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="numero-endereco">Número</label>
+                            <input type="text" id="numero-endereco-client" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="complemento-endereco">Complemento</label>
+                            <input type="text" id="complemento-endereco-client" class="form-control">
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">Atualizar Dados</button>
+                    
+                    <div class="form-group">
+                        <label for="imagem-usuario-input">Imagem de Perfil</label>
+                        <input type="file" id="imagem-usuario-input" class="form-control">
+                        <button type="button" id="upload-imagem-btn" class="btn btn-secondary">Enviar Imagem</button>
+                    </div>
+                </form>
+                <img id="imagem-usuario-client" src="" alt="Imagem do Usuário" class="img-thumbnail mt-3">
+        </div>
+        <!-- Apresentacao de Avaliacoes e parceiros do aplicativo-->
+        <div id="Reviews-client" class="tela collapse">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                    <h3>Avaliações</h3>
+                    <div id="reviews-list-client" class="list-group">
+                        <!-- Avaliações serão carregadas aqui -->
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <h4>Links Patrocinados</h4>
+                    <div class="list-group">
+                        <a href="https://junhaumhayden.github.io/publish/" class="list-group-item list-group-item-action">Landingpage</a>
+                        <a href="https://junhaumhayden.github.io/publish/flexturismo.html" class="list-group-item list-group-item-action">FlexTurismo</a>
+                        <a href="https://junhaumhayden.github.io/publish/gatinhos.html" class="list-group-item list-group-item-action">Ver Gatinhos Fofinhos</a>
+                        <a href="https://arthurs08.github.io/ChefListPrj/" class="list-group-item list-group-item-action">ChefList</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal de Cadastro -->
+<div class="modal fade" id="cadastroModal" tabindex="-1" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadastroModalLabel">Cadastro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="cadastro-form">
+                    <div class="form-group">
+                        <label for="tipo-usuario">Tipo de Usuário</label>
+                        <select id="tipo-usuario" class="form-control" required>
+                            <option value="cliente" selected>Cliente</option>
+                            <option value="profissional">Profissional</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome-cadastro">Nome</label>
+                        <input type="text" id="nome-cadastro" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-cadastro">Email</label>
+                        <input type="email" id="email-cadastro" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha-cadastro">Senha</label>
+                        <input type="password" id="senha-cadastro" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone-cadastro">Telefone</label>
+                        <input type="text" id="telefone-cadastro" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cep-cadastro">CEP</label>
+                        <input type="text" id="cep-cadastro" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero-endereco-cadastro">Número</label>
+                        <input type="text" id="numero-endereco-cadastro" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="complemento-endereco-cadastro">Complemento</label>
+                        <input type="text" id="complemento-endereco-cadastro" class="form-control">
+                    </div>
+                    <!-- Campos específicos para profissionais -->
+                    <div id="profissional-campos" class="hidden">
+                        <div class="form-group">
+                            <label for="especialidade-cadastro">Especialidade</label>
+                            <input type="text" id="especialidade-cadastro" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="registro-profissional-cadastro">Registro Profissional</label>
+                            <input type="text" id="registro-profissional-cadastro" class="form-control">
+                        </div>
+                    </div>
+                    <!-- Campos específicos para clientes -->
+                    <div id="cliente-campos">
+                        <div class="form-group">
+                            <label for="cpf-cadastro">CPF</label>
+                            <input type="text" id="cpf-cadastro" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="nascimento-cadastro">Data de Nascimento</label>
+                            <input type="date" id="nascimento-cadastro" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="./assets/img/icon36x36.ico" width="30" alt="Logo">
+            </div>
+            <div class="info">
+                <div>&copy; 2024 HTML / CSS / JavaScript / BootStrap</div>
+                <div>Desenvolvido por: Carlos Hayden Junior</div>
+            </div>
+            <div class="icons">
+                <img src="./assets/img/icon-html5-48.png" width="20" alt="HTML Icon">
+                    <img src="./assets/img/icon-css3-48.ico" width="20" alt="CSS Icon">
+                    <img src="./assets/img/icons8-js-48.png" width="20" alt="JS Icon">
+            </div>
+        </div>
+        
+    </footer>
+     <!-- Bootstrap JS (opcional, necessário para funcionalidades como o menu de hambúrguer) -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // Apresentaçao do modal de autocadastro
+        document.getElementById('tipo-usuario').addEventListener('change', function () {
+            const tipoUsuario = this.value;
+            const profissionalCampos = document.getElementById('profissional-campos');
+            const clienteCampos = document.getElementById('cliente-campos');
+
+            if (tipoUsuario === 'profissional') {
+                profissionalCampos.classList.remove('hidden');
+                clienteCampos.classList.add('hidden');
+            } else {
+                profissionalCampos.classList.add('hidden');
+                clienteCampos.classList.remove('hidden');
+            }
+        });
+        //enviar os dados do formulário de cadastro
+        document.getElementById('cadastro-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            // Coletar os dados do formulário
+            const tipoUsuario = document.getElementById('tipo-usuario').value;
+            const nome = document.getElementById('nome-cadastro').value;
+            const email = document.getElementById('email-cadastro').value;
+            const senha = document.getElementById('senha-cadastro').value;
+            const telefone = document.getElementById('telefone-cadastro').value;
+            const cep = document.getElementById('cep-cadastro').value;
+            const numeroEndereco = document.getElementById('numero-endereco-cadastro').value;
+            const complementoEndereco = document.getElementById('complemento-endereco-cadastro').value;
+
+            // Montar o objeto de dados para o cadastro
+            const dadosCadastro = {
+                nome: nome,
+                email: email,
+                senha: senha,
+                telefone: telefone,
+                cep: cep,
+                numeroEndereco: numeroEndereco,
+                complementoEndereco: complementoEndereco,
+                tipo: tipoUsuario
+            };
+
+            // Adicionar campos específicos para profissionais
+            if (tipoUsuario === 'profissional') {
+                dadosCadastro.especialidade = document.getElementById('especialidade-cadastro').value;
+                dadosCadastro.registroProfissional = document.getElementById('registro-profissional-cadastro').value;
+            }
+            // Adicionar campos específicos para clientes
+            else {
+                dadosCadastro.cpf = document.getElementById('cpf-cadastro').value;
+                dadosCadastro.nascimento = document.getElementById('nascimento-cadastro').value;
+            }
+
+            try {
+                let response;
+                if (tipoUsuario === 'profissional') {
+                    // Enviar dados para a API de profissionais
+                    response = await axios.post('http://localhost:5000/profissionais', dadosCadastro);
+                } else {
+                    // Enviar dados para a API de clientes
+                    response = await axios.post('http://localhost:5000/clientes', dadosCadastro);
+                }
+
+                // Verificar se a requisição foi bem-sucedida
+                if (response.status === 201) { // 201 Created é o status esperado para cadastro
+                    alert('Cadastro realizado com sucesso!');
+
+                    // Fechar o modal após o cadastro
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('cadastroModal'));
+                    modal.hide();
+
+                    // Limpar o formulário
+                    document.getElementById('cadastro-form').reset();
+                } else {
+                    alert('Erro ao cadastrar. Tente novamente mais tarde.');
+                }
+            } catch (error) {
+                console.error('Erro ao cadastrar:', error);
+                alert('Erro ao cadastrar. Verifique os dados e tente novamente.');
+            }
+        });
+
+    // Funções de autenticação e sessão    
+        // Verifica se há um usuário logado ao carregar a página
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = getSession();
+            if (user) {
+                redirectToDashboard(user);
+            }
+        });
+        // Salva usuário na sessão
+        function saveSession(user) {
+            sessionStorage.setItem('user', JSON.stringify(user));
+            // Armazena os dados no sessionStorage
+        }
+
+        // Recupera usuário da sessão
+        function getSession() {
+            return JSON.parse(sessionStorage.getItem('user'));
+        }
+
+        // Apaga a sessão (logout)
+        function logout() {
+            sessionStorage.clear();
+             // Redireciona para a página de login
+            document.getElementById('professional-page').classList.add('hidden');
+            document.getElementById('cliente-page').classList.add('hidden');
+            document.getElementById('login-page').classList.remove('hidden');
+            window.location.href = "index.html";
+        }
+
+        // Autenticação e redirecionamento
+        async function authenticate(email, password) {
+            console.log('Autenticando...');
+            try {
+                const response = await axios.post('http://localhost:5000/api/usuarios/login', { email, senha: password });
+                const user = response.data;
+                if (user) {
+                    saveSession(user);
+                    redirectToDashboard(user);
+                } else {
+                    alert('Email ou senha incorretos');
+                }
+            } catch (error) {
+                console.error('Erro ao autenticar:', error);
+                alert('Erro ao autenticar. Tente novamente mais tarde.');
+            }
+        }
+
+        // Redireciona usuário para a área correta
+        function redirectToDashboard(user) {
+            if (user.tipo === "profissional") {
+                // window.location.href = "dashboard-profissional.html";
+                document.getElementById('login-page').classList.add('hidden');
+                document.getElementById('professional-page').classList.remove('hidden');
+                document.getElementById('professional-name').textContent = user.nome;
+                fetchAppointmentsProfessional(user.id)
+            } else if (user.tipo === "cliente") {
+                // window.location.href = "dashboard-cliente.html";
+                document.getElementById('login-page').classList.add('hidden');
+                document.getElementById('cliente-page').classList.remove('hidden');
+                document.getElementById('cliente-name').textContent = user.nome;
+                fetchAppointmentsClient(user.id)
+            } else {
+                alert("Tipo de usuário inválido");
+                logout();
+            }
+        }
+        // Função para realizar o login
+        function login() {
+            console.log('Login');
+            // Captura o valor do campo de email
+            const email = document.getElementById('login-email').value;
+            // Captura o valor do campo de senha
+            const password = document.getElementById('login-password').value;
+            // Chama a função authenticate passando o email e a senha
+            authenticate(email, password);
+        }
+    
+
+        // Funções de navegação
+        function navega(destino) {
+            let telas = document.getElementsByClassName('tela');
+            Array.from(telas).forEach(element => {
+                element.classList.remove('show');
+                element.classList.add('collapse');
+            });
+            const targetElement = document.getElementById(destino);
+            targetElement.classList.remove('collapse');
+            targetElement.classList.add('show');
+
+            // Carregar conteúdo dinâmico
+            if (destino === 'update-data' || destino === 'update-data-client') {
+                // loadContent('./assets/forms/update-data.html', 'update-data');
+                carregarAtualizarDados();
+            } else if (destino === 'appointment-history') {
+                // loadContent('./assets/forms/new-service.html', 'new-service');
+                carregarDadosAgendamentosCliente();
+                
+            }
+        }
+       
+    // Funções de carregamento de dados
+ 
+        // Funcao para apresentar a agenda de profissional
+        async function fetchAppointmentsProfessional(professionalId) {
+            try {
+                // Recupera os agendamentos do profissional
+                const response = await axios.get(`http://localhost:5000/agendamentos/profissional/${professionalId}`);
+                const appointments = response.data;
+
+                // Limpa a lista de agendamentos
+                const appointmentsList = document.getElementById('scheduled-appointments');
+                appointmentsList.innerHTML = '';
+
+                // Filtros de status
+                const statusFilters = {
+                    CONFIRMADO: [],
+                    CANCELADO: [],
+                    PENDENTE: []
+                };
+
+                // Organiza os agendamentos por status
+                appointments.forEach(appointment => {
+                    statusFilters[appointment.status].push(appointment);
+                });
+
+                // Cria cards para cada status
+                for (const [status, filteredAppointments] of Object.entries(statusFilters)) {
+                    if (filteredAppointments.length > 0) {
+                        // Cria um container para os agendamentos do status atual
+                        const statusContainer = document.createElement('div');
+                        statusContainer.classList.add('mb-4');
+                        statusContainer.innerHTML = `<h5 class="mb-3">${status}</h5>`;
+                        appointmentsList.appendChild(statusContainer);
+
+                        // Cria cards para cada agendamento
+                        filteredAppointments.forEach(appointment => {
+                            const card = document.createElement('div');
+                            card.classList.add('col-md-4', 'mb-3');
+                            card.innerHTML = `
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="http://localhost:5000/imagens/usuario/foto/${appointment.cliente.id}" 
+                                                alt="${appointment.cliente.nome}" 
+                                                class="rounded-circle me-3" 
+                                                width="50" 
+                                                height="50">
+                                            <h6 class="card-title mb-0">${appointment.servico.nome}</h6>
+                                        </div>
+                                        <p class="card-text">
+                                            <strong>Cliente:</strong> ${appointment.cliente.nome}<br>
+                                            <strong>Data:</strong> ${new Date(appointment.dataHora).toLocaleString()}
+                                        </p>
+                                        <button class="btn btn-primary btn-sm" onclick="showAppointmentDetails(${appointment.id})">
+                                            Ver Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                            statusContainer.appendChild(card);
+                        });
+                    }
+                }
+            } catch (error) {
+                console.error('Erro ao buscar agendamentos:', error);
+                document.getElementById('error-message').innerHTML = `
+                    <div class="alert alert-danger" role="alert">
+                        Erro ao carregar agendamentos. Tente novamente mais tarde.
+                    </div>
+                `;
+            }
+        }
+
+        // Função para exibir detalhes do agendamento de profissional
+        async function showAppointmentDetails(appointmentId) {
+            try {
+                // Recupera os detalhes do agendamento
+                const response = await axios.get(`http://localhost:5000/agendamentos/${appointmentId}`);
+                const appointment = response.data;
+
+                // Recupera o endereço do cliente usando o CEP
+                const cepResponse = await axios.get(`https://viacep.com.br/ws/${appointment.cliente.cep}/json/`);
+                const endereco = cepResponse.data;
+
+                // Exibe os detalhes em um modal
+                const modalContent = `
+                    <div class="modal fade" id="appointmentDetailsModal" tabindex="-1" aria-labelledby="appointmentDetailsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="appointmentDetailsModalLabel">Detalhes do Agendamento</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Serviço</h6>
+                                            <p><strong>Nome:</strong> ${appointment.servico.nome}</p>
+                                            <p><strong>Descrição:</strong> ${appointment.servico.descricao}</p>
+                                            <p><strong>Preço:</strong> R$${appointment.servico.preco}</p>
+                                            <p><strong>Duração:</strong> ${appointment.servico.duracao} minutos</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>Cliente</h6>
+                                            <p><strong>Nome:</strong> ${appointment.cliente.nome}</p>
+                                            <p><strong>Nascimento:</strong> ${appointment.cliente.nascimento}</p>
+                                            <p><strong>Telefone:</strong> ${appointment.cliente.telefone}</p>
+                                            <p><strong>Endereço:</strong> ${endereco.logradouro}, ${appointment.cliente.numeroEndereco}, ${endereco.bairro}, ${endereco.localidade} - ${endereco.uf} - ${appointment.cliente.cep}</p>
+                                            <p><strong>Complemento:</strong> ${appointment.cliente.complementoEndereco}</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <h6>Mapa</h6>
+                                        <iframe 
+                                            width="100%" 
+                                            height="300" 
+                                            style="border:0" 
+                                            loading="lazy" 
+                                            allowfullscreen 
+                                            src="https://www.google.com/maps/embed/v1/place?key=SUA_CHAVE_API&q=${endereco.logradouro},${endereco.bairro},${endereco.localidade}">
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary" onclick="updateAppointmentStatus(${appointment.id}, 'CONFIRMADO')">Confirmar</button>
+                                    <button type="button" class="btn btn-warning" onclick="updateAppointmentStatus(${appointment.id}, 'PENDENTE')">Pendente</button>
+                                    <button type="button" class="btn btn-danger" onclick="updateAppointmentStatus(${appointment.id}, 'CANCELADO')">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Adiciona o modal ao DOM e exibe
+                document.body.insertAdjacentHTML('beforeend', modalContent);
+                const modal = new bootstrap.Modal(document.getElementById('appointmentDetailsModal'));
+                modal.show();
+            } catch (error) {
+                console.error('Erro ao buscar detalhes do agendamento:', error);
+                alert('Erro ao carregar detalhes do agendamento. Tente novamente mais tarde.');
+            }
+        }
+
+        // Função para atualizar o status do agendamento
+        async function updateAppointmentStatus(appointmentId, status) {
+            try {
+                const response = await axios.put(`http://localhost:5000/agendamentos/status/${appointmentId}`, {
+                    status: status},
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    }
+                });
+            
+
+                if (response.status === 200) {
+                    alert('Status do agendamento atualizado com sucesso!');
+                    if (getSession().tipo === 'profissional') {
+                        fetchAppointmentsProfessional(getSession().id); // Atualiza a lista de agendamentos do profissional
+                    } else {
+                        fetchAppointmentsClient(getSession().id); // Atualiza a lista de agendamentos do cliente
+                    }
+                } 
+            }catch (error) {
+                console.error('Erro ao atualizar status do agendamento:', error);
+                alert('Erro ao atualizar status. Tente novamente mais tarde.');
+            }
+        }
+        
+        // Funcao para apresentar a agenda de cliente
+        async function fetchAppointmentsClient(clienteId) {
+            try {
+                // Recupera os agendamentos do cliente
+                const response = await axios.get(`http://localhost:5000/agendamentos/cliente/${clienteId}`);
+                const appointments = response.data;
+
+                // Limpa a lista de agendamentos
+                const appointmentsList = document.getElementById('scheduled-appointments-client');
+                appointmentsList.innerHTML = '';
+
+                // Filtros de status
+                const statusFilters = {
+                    CONFIRMADO: [],
+                    CANCELADO: [],
+                    PENDENTE: []
+                };
+
+                // Organiza os agendamentos por status
+                appointments.forEach(appointment => {
+                    statusFilters[appointment.status].push(appointment);
+                });
+
+                // Cria cards para cada status
+                for (const [status, filteredAppointments] of Object.entries(statusFilters)) {
+                    if (filteredAppointments.length > 0) {
+                        // Cria um container para os agendamentos do status atual
+                        const statusContainer = document.createElement('div');
+                        statusContainer.classList.add('mb-4');
+                        statusContainer.innerHTML = `<h5 class="mb-3">${status}</h5>`;
+                        appointmentsList.appendChild(statusContainer);
+
+                        // Cria cards para cada agendamento
+                        filteredAppointments.forEach(appointment => {
+                            const card = document.createElement('div');
+                            card.classList.add('col-md-4', 'mb-3');
+                            card.innerHTML = `
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <img src="http://localhost:5000/imagens/usuario/foto/${appointment.servico.profissional.id}" 
+                                                alt="${appointment.servico.profissional.nome}" 
+                                                class="rounded-circle me-3" 
+                                                width="50" 
+                                                height="50">
+                                            <h6 class="card-title mb-0">${appointment.servico.nome}</h6>
+                                        </div>
+                                        <p class="card-text">
+                                            <strong>Profissional:</strong> ${appointment.servico.profissional.nome}<br>
+                                            <strong>Data:</strong> ${new Date(appointment.dataHora).toLocaleString()}
+                                        </p>
+                                        <button class="btn btn-primary btn-sm" onclick="showAppointmentDetailsClient(${appointment.id})">
+                                            Ver Detalhes
+                                        </button>
+                                    </div>
+                                </div>
+                            `;
+                            statusContainer.appendChild(card);
+                        });
+                    }
+                }
+            } catch (error) {
+                console.error('Erro ao buscar agendamentos:', error);
+                document.getElementById('error-message').innerHTML = `
+                    <div class="alert alert-danger" role="alert">
+                        Erro ao carregar agendamentos. Tente novamente mais tarde.
+                    </div>
+                `;
+            }
+        }
+        // Função para exibir detalhes do agendamento do Cliente
+        async function showAppointmentDetailsClient(appointmentId) {
+            try {
+                // Recupera os detalhes do agendamento
+                const response = await axios.get(`http://localhost:5000/agendamentos/${appointmentId}`);
+                const appointment = response.data;
+
+                // Recupera o endereço do cliente usando o CEP
+                const cepResponse = await axios.get(`https://viacep.com.br/ws/${appointment.servico.profissional.cep}/json/`);
+                const endereco = cepResponse.data;
+
+                // Exibe os detalhes em um modal
+                const modalContent = `
+                    <div class="modal fade" id="appointmentDetailsModal" tabindex="-1" aria-labelledby="appointmentDetailsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="appointmentDetailsModalLabel">Detalhes do Agendamento</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6>Serviço</h6>
+                                            <p><strong>Nome:</strong> ${appointment.servico.nome}</p>
+                                            <p><strong>Descrição:</strong> ${appointment.servico.descricao}</p>
+                                            <p><strong>Preço:</strong> R$${appointment.servico.preco}</p>
+                                            <p><strong>Duração:</strong> ${appointment.servico.duracao} minutos</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>Profissional</h6>
+                                            <p><strong>Nome:</strong> ${appointment.servico.profissional.nome}</p>
+                                            <p><strong>Email:</strong> ${appointment.servico.profissional.email}</p>
+                                            <p><strong>Telefone:</strong> ${appointment.servico.profissional.telefone}</p>
+                                            <p><strong>Endereço:</strong> ${endereco.logradouro}, ${appointment.servico.profissional.numeroEndereco}, ${endereco.bairro}, ${endereco.localidade} - ${endereco.uf} - ${appointment.cliente.cep}</p>
+                                            <p><strong>Complemento:</strong> ${appointment.servico.profissional.complementoEndereco}</p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <h6>Mapa</h6>
+                                        <iframe 
+                                            width="100%" 
+                                            height="300" 
+                                            style="border:0" 
+                                            loading="lazy" 
+                                            allowfullscreen 
+                                            src="https://www.google.com/maps/embed/v1/place?key=SUA_CHAVE_API&q=${endereco.logradouro},${endereco.bairro},${endereco.localidade}">
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-danger" onclick="updateAppointmentStatus(${appointment.id}, 'CANCELADO')">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Adiciona o modal ao DOM e exibe
+                document.body.insertAdjacentHTML('beforeend', modalContent);
+                const modal = new bootstrap.Modal(document.getElementById('appointmentDetailsModal'));
+                modal.show();
+            } catch (error) {
+                console.error('Erro ao buscar detalhes do agendamento:', error);
+                alert('Erro ao carregar detalhes do agendamento. Tente novamente mais tarde.');
+            }
+        }
+
+        // Função para atualizar os dados
+        async function carregarAtualizarDados() {
+        const user = getSession();
+        if (!user) {
+            alert("Usuário não autenticado.");
+            return;
+        }
+
+        const apiUrl = user.tipo === "profissional" 
+            ? `http://localhost:5000/api/usuarios/${user.id}` 
+            : `http://localhost:5000/api/usuarios/${user.id}`;
+
+        try {
+            const response = await axios.get(apiUrl);
+            const userData = response.data;
+
+            if (user.tipo === "profissional") {
+                document.getElementById('nome').value = userData.nome;
+                document.getElementById('email').value = userData.email;
+                document.getElementById('senha').value = userData.senha;
+                document.getElementById('telefone').value = userData.telefone;
+                document.getElementById('cep').value = userData.cep;
+                document.getElementById('numero-endereco').value = userData.numeroEndereco;
+                document.getElementById('complemento-endereco').value = userData.complementoEndereco;
+                document.getElementById('especialidade').value = userData.especialidade;
+                document.getElementById('registro-profissional').value = userData.registroProfissional;
+                document.getElementById('profissional-fields').classList.remove('hidden');
+                
+                // Exibir a imagem do usuário
+                const imagemUsuario = document.getElementById('imagem-usuario');
+                imagemUsuario.src = `http://localhost:5000/imagens/usuario/foto/${user.id}`;
+            } else if (user.tipo === "cliente") {
+                document.getElementById('nome-client').value = userData.nome;
+                document.getElementById('email-client').value = userData.email;
+                document.getElementById('senha-client').value = userData.senha;
+                document.getElementById('telefone-client').value = userData.telefone;
+                document.getElementById('cep-client').value = userData.cep;
+                document.getElementById('numero-endereco-client').value = userData.numeroEndereco;
+                document.getElementById('complemento-endereco-client').value = userData.complementoEndereco;
+                document.getElementById('cpf').value = userData.cpf;
+                document.getElementById('nascimento').value = userData.nascimento;
+                document.getElementById('cliente-fields').classList.remove('hidden');
+                // const updateDataForm = document.getElementById('update-data-form-client');
+                // Exibir a imagem do usuário
+                const imagemUsuario = document.getElementById('imagem-usuario-client');
+                imagemUsuario.src = `http://localhost:5000/imagens/usuario/foto/${user.id}`;
+            }
+
+            
+
+            // Anexar listener para o formulário de atualização
+            const updateDataForm = document.getElementById('update-data-form');
+            updateDataForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(updateDataForm);
+                const data = Object.fromEntries(formData.entries());
+
+                // Comparar os dados atuais com os dados originais
+                const updatedData = {};
+                for (const key in data) {
+                    if (data[key] !== userData[key]) {
+                        updatedData[key] = data[key];
+                    }
+                }
+
+                if (Object.keys(updatedData).length === 0) {
+                    alert("Nenhum dado foi alterado.");
+                    return;
+                }
+
+                try {
+                    const updateResponse = await axios.put(apiUrl, updatedData);
+                    if (updateResponse.status === 200) {
+                        alert('Dados atualizados com sucesso!');
+                        saveSession(updateResponse.data); // Atualizar a sessão com os novos dados
+                    }
+                } catch (error) {
+                    console.error('Erro ao atualizar dados:', error);
+                    alert('Erro ao atualizar dados. Tente novamente mais tarde.');
+                }
+            });
+
+            // Anexar listener para o botão de upload de imagem
+            const uploadImagemBtn = document.getElementById('upload-imagem-btn');
+            uploadImagemBtn.addEventListener('click', async () => {
+                const imagem = document.getElementById('imagem-usuario-input').files[0];
+                if (imagem) {
+                    const formData = new FormData();
+                    formData.append('file', imagem);
+
+                    try {
+                        await axios.post(`http://localhost:5000/imagens/usuario/${user.id}`, formData, {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        });
+                        alert('Imagem atualizada com sucesso!');
+                        imagemUsuario.src = URL.createObjectURL(imagem); // Atualizar a imagem exibida
+                    } catch (error) {
+                        console.error('Erro ao enviar imagem:', error);
+                        alert('Erro ao enviar imagem. Tente novamente mais tarde.');
+                    }
+                }
+            });
+        } catch (error) {
+            console.error('Erro ao carregar dados:', error);
+            alert('Erro ao carregar dados. Tente novamente mais tarde.');
+        }
+    }
+
+        // Função para cadastrar um novo servico
+        async function cadastrarNovoServico() {
+            const user = getSession();
+            if (!user || user.tipo !== "profissional") {
+                alert("Apenas profissionais podem cadastrar novos serviços.");
+                return;
+            }
+
+            const nome = document.getElementById('nome-servico').value;
+            const descricao = document.getElementById('descricao-servico').value;
+            const preco = parseFloat(document.getElementById('preco-servico').value);
+            const duracao = parseInt(document.getElementById('duracao-servico').value);
+            const situacao = document.getElementById('situacao-servico').value;
+            const dataDisponivel = document.getElementById('data-disponivel-servico').value;
+
+            const novoServico = {
+                nome: nome,
+                descricao: descricao,
+                preco: preco,
+                duracao: duracao,
+                situacao: situacao,
+                dataDisponivel: dataDisponivel,
+                profissional: {
+                    id: user.id
+                }
+            };
+
+            try {
+                const response = await axios.post('http://localhost:5000/servicos', novoServico);
+                if (response.status === 201) {
+                    alert('Serviço cadastrado com sucesso!');
+                    const servicoId = response.data.id;
+
+                    // Upload da imagem do serviço, se houver
+                    const imagemServico = document.getElementById('imagem-servico').files[0];
+                    if (imagemServico) {
+                        const formData = new FormData();
+                        formData.append('file', imagemServico);
+
+                        await axios.post(`http://localhost:5000/imagens/servico/${servicoId}`, formData, {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        });
+                        alert('Imagem do serviço enviada com sucesso!');
+                    }
+
+                    // Limpar o formulário após o cadastro
+                    document.getElementById('new-service-form').reset();
+                }
+            } catch (error) {
+                console.error('Erro ao cadastrar serviço:', error);
+                alert('Erro ao cadastrar serviço. Tente novamente mais tarde.');
+            }
+        }
+
+        // Função para carregar as avaliações
+        function carregarAvaliacoes() {
+            if (getSession().tipo === 'profissional') {
+                const apiAvaliacoesUrl = 'http://localhost:5000/avaliacoes';
+            axios.get(apiAvaliacoesUrl)
+                .then(response => {
+                const reviewsList = document.getElementById('reviews-list');
+                reviewsList.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
+                response.data.forEach(avaliacao => {
+                    const reviewItem = document.createElement('div');
+                    reviewItem.className = 'list-group-item';
+
+                    const reviewContent = `
+                    <h5 class="mb-1">${avaliacao.cliente.nome}</h5>
+                    <p class="mb-1">${avaliacao.comentario}</p>
+                    <small>Nota: ${avaliacao.nota} - Serviço: ${avaliacao.servico.nome}</small>
+                    `;
+
+                    reviewItem.innerHTML = reviewContent;
+                    reviewsList.appendChild(reviewItem);
+                });
+                })
+                .catch(error => {
+                console.error('Erro ao carregar as avaliações:', error);
+                document.getElementById('reviews-list').innerHTML = 'Ocorreu um erro ao carregar as avaliações. Tente novamente mais tarde.';
+                });
+                
+            }else{
+            const apiAvaliacoesUrl = 'http://localhost:5000/avaliacoes';
+            axios.get(apiAvaliacoesUrl)
+                .then(response => {
+                const reviewsList = document.getElementById('reviews-list-client');
+                reviewsList.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
+                response.data.forEach(avaliacao => {
+                    const reviewItem = document.createElement('div');
+                    reviewItem.className = 'list-group-item';
+
+                    const reviewContent = `
+                    <h5 class="mb-1">${avaliacao.cliente.nome}</h5>
+                    <p class="mb-1">${avaliacao.comentario}</p>
+                    <small>Nota: ${avaliacao.nota} - Serviço: ${avaliacao.servico.nome}</small>
+                    `;
+
+                    reviewItem.innerHTML = reviewContent;
+                    reviewsList.appendChild(reviewItem);
+                });
+                })
+                .catch(error => {
+                console.error('Erro ao carregar as avaliações:', error);
+                document.getElementById('reviews-list-client').innerHTML = 'Ocorreu um erro ao carregar as avaliações. Tente novamente mais tarde.';
+                });
+            }
+        }
+
+       // Event listeners
+
+        document.querySelector('button[onclick="navega(\'update-data\')"]').addEventListener('click', () => navega('update-data'));
+        document.querySelector('button[onclick="navega(\'new-service\')"]').addEventListener('click', () => navega('new-service'));
+        document.querySelector('button[onclick="navega(\'Reviews\')"]').addEventListener('click', carregarAvaliacoes);
+
+    //     document.querySelector('button[onclick="navega(\'update-data\')"]').addEventListener('click', carregarAtualizarDados);
+    //     document.querySelector('button[onclick="navega(\'new-service\')"]').addEventListener('click', cadastrarNovoServico);
+    //     document.querySelector('button[onclick="navega(\'Reviews\')"]').addEventListener('click', carregarAvaliacoes);
+    // </script>
+</body>
+</html>
