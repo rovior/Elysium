@@ -3,7 +3,7 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>ComfortAid App</title>
+        <title>Elysium App</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <!-- referências ao manifesto -->
         <link rel="manifest" href="./manifest.json">
@@ -13,8 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,200;1,400&family=Red+Hat+Display:wght@400;500;700&family=Roboto&display=swap"
         rel="stylesheet">
         <!-- ... -->
-        <link rel='stylesheet' type='text/css' media='screen' href='./src/css/style.css'>
-        <link rel="shortcut icon" type="imagex/png" href="./src/img/icone192.png">
+        <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
+        <link rel="shortcut icon" type="imagex/png" href="./assets/img/elysium.png">
         <!-- font-awesome -->
         <link rel='stylesheet' type='text/css' media='screen'         
                 href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css'>
@@ -36,7 +36,7 @@
                 </button>
 
                 <!-- Logo ou Nome do site -->
-                <a class="navbar-brand ms-3 text-light fw-bold" href="#">ComfortAid</a>
+                <a class="navbar-brand ms-3 text-light fw-bold" href="#">Elysium</a>
 
                 <!-- Itens do Menu -- Botão para alternar a visibilidade -->
                 <div class="collapse navbar-collapse" id="menuNavbar">
@@ -70,7 +70,7 @@
                     </a>
 
                     <!-- Link de Login -->
-                    <a href="comfortaid_user_env.html" class="btn btn-primary">
+                    <a href="elysium_user_env.html" class="btn btn-primary">
                         <i class="fa-solid fa-sign-in-alt"></i> Login
                     </a>
                 </div>
@@ -82,7 +82,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h3>Bem-vindo ao ComfortAid</h3>
+                        <h3>Bem-vindo ao Elysium</h3>
                         <!-- Conteúdo da página de apresentação -->
                         <div id="presentation-content"></div>
                     </div>
@@ -102,7 +102,7 @@
                                 <!-- Card 1 -->
                                 <div class="card">
                                     <div class="ad-card">
-                                        <img src="./src/img/logo.gif" alt="Landingpage" class="ad-image card-img img-fluid">
+                                        <img src="./assets/img/logo.gif" alt="Landingpage" class="ad-image card-img img-fluid">
                                         <div class="ad-text">
                                             <a href="https://junhaumhayden.github.io/publish/" class="ad-link">Landingpage</a>
                                         </div>
@@ -112,7 +112,7 @@
                                 <!-- Card 2 -->
                                 <div class="card">
                                     <div class="ad-card">
-                                        <img src="./src/img/1-quem-somos.png" alt="FlexTurismo" class="ad-image">
+                                        <img src="./assets/img/1-quem-somos.png" alt="FlexTurismo" class="ad-image">
                                         <div class="ad-text">
                                             <a href="https://junhaumhayden.github.io/publish/flexturismo.html" class="ad-link">FlexTurismo</a>
                                         </div>
@@ -225,7 +225,7 @@
                                 <!-- Card 1 -->
                                 <div class="card">
                                     <div class="ad-card">
-                                        <img src="./src/img/logo.gif" alt="Landingpage" class="ad-image card-img img-fluid">
+                                        <img src="./assets/img/logo.gif" alt="Landingpage" class="ad-image card-img img-fluid">
                                         <div class="ad-text">
                                             <a href="https://junhaumhayden.github.io/publish/" class="ad-link">Landingpage</a>
                                         </div>
@@ -235,7 +235,7 @@
                                 <!-- Card 2 -->
                                 <div class="card">
                                     <div class="ad-card">
-                                        <img src="./src/img/1-quem-somos.png" alt="FlexTurismo" class="ad-image">
+                                        <img src="./assets/img/1-quem-somos.png" alt="FlexTurismo" class="ad-image">
                                         <div class="ad-text">
                                             <a href="https://junhaumhayden.github.io/publish/flexturismo.html" class="ad-link">FlexTurismo</a>
                                         </div>
@@ -265,16 +265,15 @@
         <footer>
             <div class="footer-container">
                 <div class="logo">
-                    <img src="./src/img/icon36x36.ico" width="30" alt="Logo">
+                    <img src="./assets/img/elysium.png" width="30" alt="Logo">
                 </div>
                 <div class="info">
                     <div>&copy; 2024 HTML / CSS / JavaScript / BootStrap</div>
-                    <div>Desenvolvido por: Carlos Hayden Junior</div>
                 </div>
                 <div class="icons">
-                    <img src="./src/img/icon-html5-48.png" width="20" alt="HTML Icon">
-                    <img src="./src/img/icon-css3-48.ico" width="20" alt="CSS Icon">
-                    <img src="./src/img/icons8-js-48.png" width="20" alt="JS Icon">
+                    <img src="./assets/img/icon-html5-48.png" width="20" alt="HTML Icon">
+                    <img src="./assets/img/icon-css3-48.ico" width="20" alt="CSS Icon">
+                    <img src="./assets/img/icons8-js-48.png" width="20" alt="JS Icon">
                 </div>
             </div>
             
@@ -325,7 +324,7 @@
             
             // Função para carregar o conteúdo da página de apresentação
             function carregarApresentacao() {
-                const presentationUrl = './src/html/presentation.html';
+                const presentationUrl = './assets/html/presentation.html';
                 axios.get(presentationUrl)
                     .then(response => {
                         const presentationContent = document.getElementById('presentation-content');
@@ -609,7 +608,7 @@
                 // Verifica se há cliente autenticado
                 if (!cliente) {
                     alert('Você precisa estar autenticado para realizar um agendamento.');
-                    window.location.href = 'comfortaid_user_env.html';
+                    window.location.href = 'elysium_user_env.html';
                     return;
                 }
 
@@ -634,7 +633,7 @@
                 axios.post('http://localhost:5000/agendamentos', agendamento)
                     .then(response => {
                         alert('Agendamento realizado com sucesso! Aguarde a confirmação do profissional.');
-                        window.location.href = 'comfortaid_user_env.html';
+                        window.location.href = 'elysium_user_env.html';
                         
                     })
                     .catch(error => {

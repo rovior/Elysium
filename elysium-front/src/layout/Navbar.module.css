@@ -1,0 +1,39 @@
+/* Ajuste do menu de navegação para respeitar o fluxo da página */
+.navigation {
+  display: flex;
+  position: relative;
+  width: 100%;
+  bottom: auto;
+  z-index: 1;
+}
+
+.navButton {
+  width: 33%;
+  height: 3em;
+  border-radius: 0 !important;
+  border: 2px solid red;
+}
+
+/* Estilos básicos */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.linkItem,
+#logout {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
