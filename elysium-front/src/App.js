@@ -1,18 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
-import Company from './pages/Company';
-import Contact from './pages/Contact';
-import NewProject from './pages/NewProject';
-import Projects from './pages/Projects';
-import Project from './pages/Project';
-import Services from './pages/Services';
+import Home from './components/pages/Home';
+import Company from './components/pages/Company';
+import Contact from './components/pages/Contact';
+import NewProject from './components/pages/NewProject';
+import Projects from './components/pages/Projects';
+import Project from './components/pages/Project';
+import Services from './components/pages/Services';
 
-import Container from './layout/Container';
-import Navbar from './layout/Navbar';
-import Footer from './layout/Footer';
-import Login from './login/Login';
-import PrivateRoute from './login/PrivateRoute';
+import Container from './components/layout/Container';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Login from './components/login/Login';
+import PrivateRoute from './components/login/PrivateRoute';
 
 function App() { 
   return (
@@ -20,7 +20,7 @@ function App() {
       <Navbar />
       <Container customClass="min-height">
         <Routes>
-          <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login/>}/>
           <Route path="/company" element={<Company />} />
           <Route path="/contact" element={<Contact />} />

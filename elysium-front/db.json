@@ -1,0 +1,73 @@
+{
+  "projects": [
+    {
+      "id": "63c9",
+      "name": "SiteLease",
+      "budget": "33",
+      "category": {
+        "id": "1",
+        "name": "infra"
+      },
+      "cost": 8,
+      "services": [
+        {
+          "name": "SiteLease",
+          "cost": "2",
+          "description": "serviço para limpesa",
+          "id": "736f8c84-cb9b-4ab7-8e5a-58c64c6f7259"
+        }
+      ]
+    },
+    {
+      "id": "cdf9",
+      "name": "SiteLease",
+      "budget": "2323",
+      "category": {
+        "id": "1",
+        "name": "infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "ed88",
+      "name": "SiteLease",
+      "budget": "43",
+      "category": {
+        "id": "1",
+        "name": "infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "13db",
+      "name": "SItelease",
+      "budget": "2000",
+      "category": {
+        "id": "3",
+        "name": "Desing"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Desing"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}

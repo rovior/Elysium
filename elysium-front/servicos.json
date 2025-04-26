@@ -1,0 +1,74 @@
+{
+  "servicos": [
+    {
+      "id": "94313731",
+      "name": "Massagem Modeladora",
+      "price": 249.9,
+      "oldPrice": 349.099,
+      "image": "https://static.wixstatic.com/media/5ceeb6_ad158dbf41a24104b79f3eca01d6c7ad~mv2.png/v1/fill/w_500,h_308,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ceeb6_ad158dbf41a24104b79f3eca01d6c7ad~mv2.png"
+    },
+    {
+      "id": "94313762",
+      "name": "Tênis  Revol",
+      "price": 249.99,
+      "oldPrice": 349.199,
+      "image": "https://static.wixstatic.com/media/5ceeb6_619ca19f9d6c4c82816e588a72eaf208~mv2.jpg/v1/fill/w_500,h_333,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ceeb6_619ca19f9d6c4c82816e588a72eaf208~mv2.jpg"
+    },
+    {
+      "id": "943137XQ",
+      "name": "Tên Revol5",
+      "price": 249.99,
+      "oldPrice": 349.99,
+      "image": "https://static.wixstatic.com/media/5ceeb6_7fca292bb9f3480ebec37021875ce2bd~mv2.jpg/v1/fill/w_500,h_293,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/5ceeb6_7fca292bb9f3480ebec37021875ce2bd~mv2.jpg"
+    },
+    {
+      "id": "95077714",
+      "name": "Tênis Asics Patriot 12 Noosa",
+      "price": 199.99,
+      "oldPrice": 279.99,
+      "image": "https://clinicah2a.com.br/wp-content/uploads/2023/04/massagem-relaxante.jpg"
+    },
+    {
+      "id": "9507779N",
+      "name": "Tênis Asics Patriot 12 Noosa",
+      "price": 199.99,
+      "oldPrice": 279.99,
+      "image": "https://clinicah2a.com.br/wp-content/uploads/2023/11/shiatsu-corporal-430x430.jpg"
+    },
+    {
+      "id": "92601102",
+      "name": "Tênis Oakley Modoc Low 3.0",
+      "price": 449.99,
+      "oldPrice": 559.99,
+      "image": "https://clinicah2a.com.br/wp-content/uploads/2023/08/drenagem-linfatica-430x430.webp"
+    },
+    {
+      "id": "9465450R",
+      "name": "Tênis Nike Renew Run",
+      "price": 279.99,
+      "oldPrice": 399.99,
+      "image": "https://clinicah2a.com.br/wp-content/uploads/2023/04/massagem-modeladora-430x430.jpg"
+    },
+    {
+      "id": "95004531",
+      "name": "Tênis Nike Quest 3",
+      "price": 299.99,
+      "oldPrice": 449.99,
+      "image": "https://static.wixstatic.com/media/e80ded_2302960828834010a197753fb13e12d5~mv2.jpg/v1/fill/w_833,h_552,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e80ded_2302960828834010a197753fb13e12d5~mv2.jpg"
+    },
+    {
+      "id": "94672705",
+      "name": "Tênis adidas Lite Racer 20",
+      "price": 179.99,
+      "oldPrice": 229.99,
+      "image": "https://static.wixstatic.com/media/e80ded_5bdbcfd3049147e98f1be384355154ab~mv2.jpg/v1/fill/w_833,h_735,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e80ded_5bdbcfd3049147e98f1be384355154ab~mv2.jpg"
+    },
+    {
+      "id": "92456602",
+      "name": "Tênis Infantil Puma Wired",
+      "price": 179.99,
+      "oldPrice": 209.99,
+      "image": "https://static.wixstatic.com/media/e80ded_24b65494eea74acaa5d898ea870f106f~mv2.jpg/v1/fill/w_833,h_702,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e80ded_24b65494eea74acaa5d898ea870f106f~mv2.jpg"
+    }
+  ]
+}

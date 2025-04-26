@@ -1,0 +1,140 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  justify-content: flex-start;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.items {
+  flex: 0 0 auto;
+  min-width: 250px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  scroll-snap-align: center;
+}
+
+.items:hover {
+  transform: translateY(-5px);
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d9534f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .items {
+    min-width: 200px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .oldPrice,
+  .price {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .items {
+    min-width: 180px;
+  }
+
+  .image {
+    margin-bottom: 0.5rem;
+  }
+
+  .name {
+    font-size: 0.95rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+}
+
+.buttons {
+  width: 100%;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons button img {
+  width: 24px; /* Ajuste o tamanho da imagem */
+  height: 24px; /* Ajuste o tamanho da imagem */
+  transition: transform 0.3s ease;
+}
+
+.buttons button:hover img {
+  transform: scale(1.2); /* Dá um efeito de aumentar a imagem no hover */
+}
+
+.buttons button:first-child img {
+  transform: rotate(180deg);
+}

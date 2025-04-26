@@ -1,0 +1,8 @@
+Caso o projeto esteja sem o node_modules apenas baixar com < $npm install > 
+
+rodar o projeto $npm start     rodar a api    $npm run backend
+
+#comandos basicos git
+criar uma branch
+git checkout -b <branch>/nome da branch
+git merge <nome da branch>

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  /* Faz quebrar no mobile */
+  margin-bottom: 4em;
+
+  .wrapper{
+    display: flex;
+  }
+
+  h2{
+    font-size: 1.4em;
+    color: black;
+  }
+
+  .element {
+    flex: 1;
+  }
+
+  .card {
+    padding: 6.4em;
+  }
+
+  img {
+    margin: auto;
+  }
+}

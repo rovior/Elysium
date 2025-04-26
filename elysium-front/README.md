@@ -1,122 +1,70 @@
-<div align="center">
-<img src="./assets/img/LogoComfortAid-removebg500.png" alt="Logo Comfortaid" width="200">
-</div>
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<h1 align="center"> Elysium APP Project </h1>
+## Available Scripts
 
-![Powered by Bootstrap](https://img.shields.io/badge/Powered_by-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Powered by Axios](https://img.shields.io/badge/Powered_by-Axios-671ddf?style=for-the-badge)
-![Powered by SPA](https://img.shields.io/badge/Powered_by-SPA-blue?style=for-the-badge)  
-![Powered by PWA](https://img.shields.io/badge/Powered_by-PWA-5a0fc8?style=for-the-badge)
-![Powered by JavaScript](https://img.shields.io/badge/Powered_by-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
-![Powered by HTML5](https://img.shields.io/badge/Powered_by-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
-![Powered by CSS3](https://img.shields.io/badge/Powered_by-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Powered by Service Workers](https://img.shields.io/badge/Powered_by-Service_Workers-008080?style=for-the-badge)
+In the project directory, you can run:
 
-## Descrição do Projeto
+### `npm start`
 
-> A aplicação pode ser acessada pela [Web page](https://junhaumhayden.github.io/Elysium_APP_Project/)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-> Um pequeno um vídeo de demonstração do aplicativo pode ser visualizado no [youtube](https://youtu.be/bbU-9l1c2Ss)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### 📌 Sobre o Projeto
+### `npm test`
 
-Elysium é uma aplicação desenvolvida para conectar clientes a profissionais que oferecem serviços de massagem terapêutica e estética domiciliar. O aplicativo permite que os usuários busquem serviços por região, agendem atendimentos e avaliem os profissionais cadastrados. Além disso, possibilita que profissionais da área divulguem seus serviços, incluindo especialistas em conhecimentos tradicionais, como parteiras e curandeiras.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 🔍 Comportamento Esperado
+### `npm run build`
 
-- Os usuários podem se cadastrar como clientes ou profissionais.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Clientes podem navegar pelos serviços disponíveis, visualizar avaliações, cadastrar-se e agendar atendimentos com profissionais.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-- Os profissionais podem gerenciar seu perfil, cadastrar novos serviços e receber agendamentos, definir horários de atendimento e receber avaliações dos clientes.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- Ambas as categorias podem acessar o histórico de avaliações e modificar seus dados pessoais.
+### `npm run eject`
 
-- O sistema utiliza autenticação por sessão para garantir que cada usuário acesse apenas as funcionalidades adequadas ao seu perfil.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- O aplicativo funciona como uma SPA (Single Page Application) para navegação dinâmica e fluida.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- Implementação de PWA (Progressive Web App) para permitir instalação no dispositivo e uso offline parcial.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### 🛠️ Tecnologias Utilizadas
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- `Frontend`: HTML, CSS, JavaScript (ES6+), Bootstrap
+## Learn More
 
-- `Frameworks e Bibliotecas`: Axios para requisições HTTP, FontAwesome para ícones
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- `Arquitetura`: SPA (Single Page Application), PWA (Progressive Web App), LocalStorage / SessionStorage (persistência de autenticação)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- `Backend`: API REST desenvolvida em Java com Spring Boot, JPA/Hibernate (persistência de dados)
+### Code Splitting
 
-- `Banco de Dados`: H2 (ambiente de desenvolvimento) e MySQL (ambiente de produção)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-#### Ferramentas de Desenvolvimento
+### Analyzing the Bundle Size
 
-- Git e GitHub (controle de versão)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- VS Code / IntelliJ IDEA
+### Making a Progressive Web App
 
-- Postman (testes de API)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-###  🔀 Fluxo de Navegação das Telas
-``` mermaid
-graph TD;
-    A[Home] -->|Acessa| B[Serviços];
-    A -->|Acessa| C[Profissionais];
-    A -->|Acessa| D[Avaliações];
-    A -->|Login| E[Autenticar];
-    E -->|Novo Usuário| F[Auto Cadastro];
-    E -->|Login| G[Usuário Freguês];
-    E -->|Login| H[Usuário Profissional];
-    G -->|Acessa| I[Freguês Home];
-    G -->|Gerenciar| J[Atualizar Dados];
-    G -->|Avaliar| K[Avaliações];
-    G -->|Sair| L[Logout];
-    H -->|Acessa| M[Profissional Home];
-    H -->|Gerenciar| N[Atualizar Dados];
-    H -->|Novo Serviço| O[Novo Serviço];
-    H -->|Avaliar| P[Avaliações];
-    H -->|Sair| Q[Logout];
-```
+### Advanced Configuration
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### 📂 Estrutura do Projeto
-```
-/confortaid_project
-├── index.html              # Página principal
-├── Elysium_user_env.html # Página de login/cadastro
-├── /assets                 # Recursos do projeto
-│   ├── /css                # Estilos CSS
-│   ├── /html               # Páginas secundárias
-│   │   └── presentation.html # Página de apresentação
-│   └── /js                 # Scripts JavaScript
-│       └── script.js       # Lógica de frontend
-```
+### Deployment
 
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### Função de Cada Arquivo
+### `npm run build` fails to minify
 
-
-- **index.html**: Página principal da aplicação, redireciona usuários não autenticados para login.
-
-- **Elysium_user_env.html**: Interface para login e cadastro de usuários.
-
-- **/assets/css**: Contém os estilos da aplicação.
-
-- **/assets/html/presentation.html**: Arquivo HTML que representa a página de apresentação do serviço.
-
-- **/assets/js/script.js**: Lida com funcionalidades da interface, como eventos e interações do usuário.
-
-- **/assets/js/main.js**: Controla a inicialização da aplicação e manipulação de sessões.
-
-- **/assets/js/service-worker.js**: Implementa funcionalidades de PWA, como cache offline e melhoria de desempenho.
-
-- **manifest.json**: Define as configurações da aplicação como PWA, incluindo ícones e configurações de exibição.
-
-
-# Author
-
-| [<img src="https://avatars.githubusercontent.com/u/79289647?v=4" width=115><br><sub>Carlos Hayden</sub>](https://github.com/JunhaumHayden) |
-| :---: |
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

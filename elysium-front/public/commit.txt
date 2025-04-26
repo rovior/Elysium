@@ -1,0 +1,88 @@
+<<<<<<< HEAD
+
+
+Fluxo do projeto:
+
+primeiro:
+criar a pagina que queremos que apreça por exemplo Home.js
+
+segundo:
+Em App.js apontar qual o caminho dessa class para que seja chamada na nossa page dentro de App.js temos que importar a classe <import Home from './components/pages/Home'> e depois na função principal chamar essa classe como esta bem visivel nesse processo
+
+terceiro:
+ver no nav bar se o link esta corrrespondente para que ao clicar no nave var seja direcionado para a pagina desejada
+
+=======
+nessa aula a gente vai criar uma API para simular um banco de dados. Ela vai ser responsavel por armazenar as categorias e mostrar as mesmas no nosso "Senecione a categoria" la em "Novo projeto". Para que a gente tenha uso dela é preciso abrir um novo terminal aqui no vscode mesmo apertando no " + " no canto direito do terminal. 
+
+A nossa API/Bancodedados vai ser criada com "db.json" que esta dentro do diretorio "src" dentro dela vamos ter categorias.
+
+Para que essa API tenha utilidade é preciso fazer uma implementação no arquivo "package.json" dentro dele na sessão  "Debug" vamos atribuir o conteudo:
+
+"backend": "json-server --watch db.json --port 5000",
+
+nesse caso enquanto a gente estiver rodando nosso programa os dados serão visiveis afim de teste no nosso sistema. Lembrando que é preciso rodar a API no terminal com o comando:
+
+$ npm run backend
+
+eu posso visualisar o conteudo da minha API no navegador atravez do endereço
+
+----     localhost:5000/categories     ----
+
+<<<<<<< HEAD
+Essa foi a primeira faze Emplementamos então categories na nossa API/bancodedados e agora vamos trabalhar com a inclusão de projetos na nssa API/bancodedados.
+>>>>>>> 0bdbce84c (Conectando com API pelo React #23)
+=======
+para ter acesso a isso foi preciso então fazer a logica para que eu consiga acessar as categorias na API
+""" ProjectForm.js
+const [categories, setCategories] = useState([])
+
+    useEffect(() =>{
+        fetch('http://localhost:5000/categories', {
+            method: 'GET',
+            headers:{
+                'Content-Type': 'application/json',
+            },
+        })
+        .then((resp)=>resp.json())
+        .then((data) => {
+            setCategories(data)
+        })
+        .catch((err) => console.log(err))
+    }, [])
+
+"""
+
+Para assim captar ela e mandar para o select ao qual vai imprimir essas categorias
+
+"""ProjectForm.js
+<Select 
+            name = "category_id" 
+            text = "Selecione a categoria"
+            options = {categories}
+            />
+"""
+
+No select recebemos a informação e assim imprimimos
+
+"""Select.js
+function Select({text, name, options, handleOnChange, value}){
+    return(
+        <div className={styles.form_control}>
+            <label htmlFor={name}>{text}:</label>
+            <select name={name} id={name}>
+                <option>Selecione uma opção</option>
+                {options.map((option) => (
+                    <option value={option.id} key={option.id}>{option.name}</option>
+                    ))
+                }
+            </select>
+        </div>
+    )
+}
+"""
+
+Essa foi a primeira faze Emplementamos então categories na nossa API/bancodedados e agora vamos trabalhar com a inclusão de projetos na nossa API/bancodedados.
+
+
+>>>>>>> 4e73da944 (Inclusão de informações no banco de dados #24)

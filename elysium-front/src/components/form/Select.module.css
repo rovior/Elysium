@@ -1,0 +1,17 @@
+.form_control {
+    display: flex;
+    flex-direction: column; /* Corrigido de 'colum' para 'column' */
+    margin-bottom: 1em; /* Espaçamento entre os campos */
+}
+
+.form_control label {
+    margin-bottom: 0.6em; /* Espaço entre o label e o select */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+.form_control select {
+    padding: 0.7em;
+    border: none; /* Remove a borda */
+    background-color: white; /* Define o fundo branco */
+    color: black; /* Deixa o texto legível (preto) */
+}
